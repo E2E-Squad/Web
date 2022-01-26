@@ -1,32 +1,45 @@
-/*
-* To better understand the Atomics, please see the https://bradfrost.com/blog/post/atomic-web-design/
+/**
+* This project is using Atomics Design & BEM Naming Convention
+* - To better understand Atomics Design, please see the https://bradfrost.com/blog/post/atomic-web-design/
+* - Here is more to read about BEM Naming Convention http://getbem.com/introduction/ and http://getbem.com/naming/
 */
 
-/*
+/**
+* PARTIALS
+*/
+
+@import "partials/variables";
+@import "partials/reset";
+@import "partials/mixins";
+
+/**
 * ATOMS
 */
 
-@import "atoms/variables";
-@import "atoms/reset";
-@import "atoms/mixins";
-@import "atoms/layout";
 @import "atoms/typography";
 @import "atoms/buttons";
+@import "atoms/icons";
 
-/* 
+/** 
 * MOLECULES
 */
 
+@import "molecules/forms";
 
-/*
+/**
 * ORGANISIMS
 */
 
+@import "organisms/layout";
 @import "organisms/header";
 @import "organisms/footer";
 
-/*
+/**
 * PAGES
 */
 
 @import "pages/Home.module";
+
+/**
+* TEMPLATES
+*/
