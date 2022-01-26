@@ -1,0 +1,14 @@
+/**
+* Here is how to import local fonts
+* - free fonts --> https://fonts.google.com/
+* - woff2 & woff formats are needed --> https://cloudconvert.com/font-converter
+* - save the files into styles/assets/fonts/
+*
+*  @font-face {
+*    font-family: "font-name";
+*    src: url("../assets/fonts/font-name.woff") format("woff"),
+*      url("../assets/fonts/font-name.woff2") format("woff2");
+*    font-style: normal;
+*    font-weight: 100;
+*  }
+*/

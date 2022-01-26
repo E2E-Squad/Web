@@ -1,5 +1,7 @@
-// Media queries
-
+/**
+* Media queries
+* - https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+*/
 @mixin breakpoint($width, $direction: max) {
     @if $direction == min {
         @media screen and (min-width: $width) {
@@ -12,7 +14,9 @@
     }
 }
 
-// Positioning
+/**
+* Positioning
+*/
 @mixin center {
     position: absolute;
     top: 50%;
