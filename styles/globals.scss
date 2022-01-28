@@ -1,0 +1,32 @@
+/*
+* To better understand the Atomics, please see the https://bradfrost.com/blog/post/atomic-web-design/
+*/
+
+/*
+* ATOMS
+*/
+
+@import "atoms/variables";
+@import "atoms/reset";
+@import "atoms/mixins";
+@import "atoms/layout";
+@import "atoms/typography";
+@import "atoms/buttons";
+
+/* 
+* MOLECULES
+*/
+
+
+/*
+* ORGANISIMS
+*/
+
+@import "organisms/header";
+@import "organisms/footer";
+
+/*
+* PAGES
+*/
+
+@import "pages/Home.module";
