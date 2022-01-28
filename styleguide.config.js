@@ -23,5 +23,21 @@ module.exports = {
                 }
             ]
         }
-    }
+    },
+    sections: [
+        {
+            name: 'Introduction',
+            content: './docs/introduction.md'
+        },
+        {
+            name: 'Atoms',
+            components: './components/Atoms/**/*.tsx',
+            sectionDepth: 2
+        },
+        {
+            name: 'Molecules',
+            components: './components/Molecules/**/*.tsx',
+            sectionDepth: 2
+        },
+    ]
 };
