@@ -1,8 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
-
 const projectRoot = path.resolve(__dirname, '..')
-console.log(path.resolve(projectRoot, 'styles/globals.scss'))
 module.exports = {
     title: "E2E Styleguide",
     version: "0.0.1",
@@ -13,17 +10,9 @@ module.exports = {
         {}
     ).parse,
     require: [
-        path.resolve(projectRoot, 'styles/test.css'),
         path.resolve(projectRoot, 'styles/globals.scss'),
+        path.resolve(projectRoot, 'styles/_variables.scss'),
     ],
-    styles: {
-        StyleGuide: {
-            '@global body': {
-                fontFamily: 'Helvetica',
-                color: 'red'
-            }
-        }
-    },
     theme: {
         // TODO: Dark mode
     },
@@ -47,15 +36,7 @@ module.exports = {
                     use: ['style-loader', 'css-loader']
                 }
             ]
-        },
-        resolve: {
-            extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"],
-        },
-        plugins: [
-            new webpack.DefinePlugin({
-                process: {env: {}},
-            }),
-        ],
+        }
     },
     sections: [
         {
@@ -74,7 +55,3 @@ module.exports = {
         },
     ]
 };
-
-new webpack.DefinePlugin({
-    process: { env: {} },
-})

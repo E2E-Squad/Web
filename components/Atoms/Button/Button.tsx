@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-// import styles from './Button.module.css';
-//import './Button.module.scss';
+import styles from './Button.module.scss';
 import classNames from "classnames";
 
 interface ICounter {
@@ -29,10 +28,9 @@ const Button = ({text, children}: Props) => {
         console.log(counter.value)
         return counter.value
     }
-    const classes = classNames({})
-    // const classes = classNames(styles.btnDummy, styles['btn-margin'], {
-    //     [styles.red]: clicked
-    // })
+    const classes = classNames(styles.btnDummy, styles['btn-margin'], {
+        [styles.red]: clicked
+    })
     return (
         <>
             <span style={{ color: 'blue' }}>{text}</span>
