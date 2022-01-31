@@ -1,0 +1,33 @@
+{
+  "name": "e2e-styleguide",
+  "version": "0.0.1",
+  "description": "UI Styleguide for E2E website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^5.2.7",
+    "next": "^12.0.9",
+    "postcss-loader": "^4.3.0",
+    "react": "^17.0.2",
+    "react-docgen-typescript": "^2.2.2",
+    "react-dom": "^17.0.2",
+    "react-styleguidist": "^11.2.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^10.2.1",
+    "typescript": "^4.5.5",
+    "webpack": "^4.46.0"
+  },
+  "dependencies": {
+    "core-js": "^3.20.3",
+    "style-loader": "^2.0.0"
+  }
+}
