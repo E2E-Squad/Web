@@ -3,10 +3,14 @@
 */
 
 /*
+* Global SASS variables
+*/
+@import "variables";
+
+/*
 * ATOMS
 */
 
-@import "atoms/variables";
 @import "atoms/reset";
 @import "atoms/mixins";
 @import "atoms/layout";

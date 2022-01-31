@@ -4,7 +4,7 @@ module.exports = {
     title: "E2E Styleguide",
     version: "0.0.1",
     components: path.resolve(projectRoot, "components/**/*.tsx"),
-    contextDependencies: [path.resolve(projectRoot, 'components/')],
+    contextDependencies: [path.resolve(projectRoot, 'components/'), path.resolve(projectRoot, 'styles/')],
     propsParser: require("react-docgen-typescript").withCustomConfig(
         path.resolve(projectRoot, 'tsconfig.json'),
         {}
@@ -13,6 +13,7 @@ module.exports = {
         path.resolve(projectRoot, 'styles/globals.scss'),
         path.resolve(projectRoot, 'styles/_variables.scss'),
     ],
+    styleguideDir: "static",
     theme: {
         // TODO: Dark mode
     },
@@ -20,6 +21,7 @@ module.exports = {
         react: path.resolve('./node_modules/react')
     },
     webpackConfig: {
+
         module: {
             rules: [
                 {
@@ -29,7 +31,16 @@ module.exports = {
                 },
                 {
                     test: /\.scss$/,
-                    use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+                    include: path.resolve(projectRoot),
+                    exclude: /node_modules/,
+                    use: ['style-loader', 'css-loader', 'postcss-loader', {
+                        loader: "sass-loader",
+                        options: {
+                            sassOptions: {
+                                includePaths: [path.join(projectRoot)],
+                            },
+                        }
+                    }]
                 },
                 {
                     test: /\.css$/,
