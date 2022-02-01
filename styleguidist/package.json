@@ -4,7 +4,8 @@
   "description": "UI Styleguide for E2E website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "styleguidist server",
+    "build": "styleguidist build"
   },
   "author": "",
   "license": "ISC",

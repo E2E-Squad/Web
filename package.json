@@ -5,9 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "lint": "next lint"
   },
   "dependencies": {
     "classnames": "^2.3.1",
