@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Prérequis
+* git (obviously)
+* node 16 avec npm
+
+> Sur MacOS ou Linux, je suggère fortement d'utiliser
+> [Node.js Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating) afin de simplifier l'installation et
+> la gestion de node.
 
 ## Getting Started
 
-First, run the development server:
+1. Cloner le dépôt
+2. Installer les dépendances
+3. Démarrer le serveur de développement
 
 ```bash
+git clone git@github.com:E2E-Squad/Web.git E2E-Web
+cd E2E-Web
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans un navigateur pour voir le résultat.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Styleguide
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Le styleguide possède pour le moment son propre serveur, car il nécessite Webpack 4 pour tourner correctement (d'après
+ce que j'ai pu expérimenter et plusieurs issues Github) or Next.js utilise Webpack 5. De plus, Next.js 12 utilise
+désormais [SWC](https://swc.rs/) ou lieu de [Babel](https://babeljs.io/) comme transpilateur de JS alors que le
+styleguide utilise toujours Babel.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Il se peut donc que quelque chose fonctionne sur le site principal, mais pas sur le styleguide, ou inversement. Si le
+cas se présente, merci de privilégier le site principal et signaler un bug sur le styleguide.
 
-## Learn More
+Tous les composants sont importés automatiquement depuis le répertoire `components/` à la racine du projet. 
 
-To learn more about Next.js, take a look at the following resources:
+1. Aller dans le répertoire `styleguide`
+2. Installer les dépendances
+3. Démarrer le serveur de développement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+cd E2E-Web/styleguide
+npm install
+npm run dev
+```
