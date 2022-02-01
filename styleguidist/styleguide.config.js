@@ -15,7 +15,6 @@ module.exports = {
     ],
     styleguideDir: "static",
     theme: {
-        // TODO: Dark mode
     },
     moduleAliases: {
         react: path.resolve('./node_modules/react')
@@ -48,20 +47,32 @@ module.exports = {
             ]
         }
     },
+    pagePerSection: true,
     sections: [
         {
             name: 'Introduction',
             content: path.resolve(projectRoot, 'docs/introduction.md')
         },
         {
-            name: 'Atoms',
-            components: path.resolve(projectRoot, 'components/Atoms/**/*.tsx'),
-            sectionDepth: 2
+            name: 'Premier composant',
+            content: path.resolve(projectRoot, 'docs/component.md')
         },
         {
-            name: 'Molecules',
-            components: path.resolve(projectRoot, 'components/Molecules/**/*.tsx'),
-            sectionDepth: 2
+            name: "Catalogue",
+            sections: [
+                {
+                    name: 'Atoms',
+                    components: path.resolve(projectRoot, 'components/Atoms/**/*.tsx'),
+                    sectionDepth: 0
+                },
+                {
+                    name: 'Molecules',
+                    components: path.resolve(projectRoot, 'components/Molecules/**/*.tsx'),
+                    sectionDepth: 0
+
+                },
+            ],
+            sectionDepth: 0
         },
     ]
 };

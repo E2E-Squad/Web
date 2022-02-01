@@ -1,5 +1,3 @@
-# Ajouter un composant
-
 ## Créer le fichier
 
 1. Créer un dossier au bon endroit dans le répertoire `components/{Atoms,Molecules,Organisms}/`
@@ -10,7 +8,7 @@ Vous devriez déjà voir apparaître votre composant dans le styleguide.
 Une erreur est apparue dans la console, car ce fichier n'exporte pas encore de composant.
 
 Exemple :
-```
+``` text static
 I create a component called Button.
 .
 ├── ...
@@ -30,7 +28,7 @@ I create a component called Button.
 Le nom de la fonction correspond au nom du composant.
 
 Exemple :
-```tsx
+```tsx static
 import React from 'react';
 
 /**
@@ -53,7 +51,7 @@ Pour afficher le composant dans le styleguide, il faut créer un fichier (markdo
 d'exemple qui portera le même nom que notre composant. Il prendra l'extension `.md`.
 
 Exemple :
-```
+``` text static
 I create the example file for my Button component.
 .
 ├── ...
@@ -72,7 +70,7 @@ Dans ce fichier, il faut écrire une description (si besoin) et un example en co
 markdown qui sera exécuté par le styleguide.
 
 Exemple :
-````markdown
+````markdown static
 This button is really basic.
 
 ```tsx
@@ -89,7 +87,7 @@ Le JSX (ou TSX) permet de manipuler des éléments du DOM sans devoir recourir
 La fonction peut donc directement retourner le composant en HTML.
 
 Exemple :
-```tsx
+```tsx static
 const Button = () => {
     return (
         <button>I am a button</button>
@@ -108,7 +106,7 @@ projet, nous utilisons SASS dans sa syntaxe délimitée (SCSS).
 Ce fichier aura donc le nom de notre composant avec l'extension `.module.scss`.
 
 Exemple :
-```
+``` text static
 I create the style file for my Button component.
 .
 ├── ...
