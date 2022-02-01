@@ -1,14 +1,8 @@
 module.exports = {
     presets: [
-        [
-            '@babel/env',
-            // {
-            //     modules: false,
-            //     useBuiltIns: 'usage',
-            //     corejs: "2.6",
-            // }
-        ],
+        '@babel/env',
         '@babel/react',
         "@babel/preset-typescript",
-    ]
+    ],
+    plugins: ["styled-jsx/babel"]
 }
