@@ -58,6 +58,10 @@ module.exports = {
             content: path.resolve(projectRoot, 'docs/component.md')
         },
         {
+            name: 'Tâches',
+            content: path.resolve(projectRoot, 'docs/tasks.md')
+        },
+        {
             name: "Catalogue",
             sections: [
                 {
