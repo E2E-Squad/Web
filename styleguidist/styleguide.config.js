@@ -17,13 +17,14 @@ module.exports = {
     theme: {
     },
     moduleAliases: {
-        react: path.resolve('./node_modules/react')
+        // react: path.resolve('../node_modules/react'),
+        lib: path.resolve('../lib'),
     },
     webpackConfig: {
         module: {
             rules: [
                 {
-                    test: /\.tsx/,
+                    test: /\.tsx?/,
                     loader: "babel-loader",
                     exclude: /node_modules/
                 },
