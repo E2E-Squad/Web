@@ -4,7 +4,7 @@
     display: inline-block;
     color: $color !important;
     background-color: $bg;
-    border: $border;
+    border: $border $color solid;
     border-radius: $radius;
     padding: $padding;
     transition: all 0.3s $ease;

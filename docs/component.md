@@ -15,7 +15,7 @@ I create a component called Button.
 ├── components
 │   ├── Atoms
 │   │   ├── Button          # Component directory
-│   │   │   └── Button.tsx  # Component file
+│   │   │   └── index.tsx  # Component file
 │   │   └── ...
 │   ├── Molecules
 │   └── Organisms
@@ -58,7 +58,7 @@ I create the example file for my Button component.
 ├── components
 │   ├── Atoms
 │   │   ├── Button
-│   │   │   ├── Button.tsx
+│   │   │   ├── index.tsx
 │   │   │   └── Button.md   # Example file
 │   │   └── ...
 │   ├── Molecules
@@ -113,7 +113,7 @@ I create the style file for my Button component.
 ├── components
 │   ├── Atoms
 │   │   ├── Button
-│   │   │   ├── Button.tsx
+│   │   │   ├── index.tsx
 │   │   │   ├── Button.module.scss   # Style file
 │   │   │   └── Button.md
 │   │   └── ...

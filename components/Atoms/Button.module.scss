@@ -1,0 +1,9 @@
+@import "styles/globals";
+
+button {
+  @include btn($primary, $white, 5px, 50%, 20px);
+}
+
+.red {
+  color: red;
+}
