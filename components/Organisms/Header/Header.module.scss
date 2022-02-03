@@ -7,17 +7,21 @@
     justify-content: space-between;
     height: 80px;
     background-color: $easternBlue;
-    color: $white;
     padding: 0 1.5rem;
 
     @include breakpoint($small, min) {
         background-color: $white;
-        color: $black;
     }
 
     .header-logo {
         display: flex;
         align-items: center;
+        color: $white;
+        text-decoration: none;
+
+        @include breakpoint($small, min) {
+            color: $black;
+        }
 
         &__container {
             height: 50px;
@@ -34,29 +38,6 @@
         @include breakpoint($small, min) {
             display: flex;
             align-items: center;
-        }
-
-        &__links {
-            ul {
-                padding: 0;
-                margin: 0;
-                display: flex;
-                align-items: center;
-                list-style-type: none;
-
-                li {
-                    margin: 0 2rem;
-
-                    a {
-                        text-decoration: none;
-                        color: $white;
-
-                        @include breakpoint($small, min) {
-                            color: $black;
-                        }
-                    }
-                }
-            }
         }
 
         &__avatar {
@@ -86,35 +67,23 @@
     }
 }
 
-.header-dropdown-menu {
-    background-color: #E5E5E5;
-
-    ul {
-        padding: 2rem 0;
-        margin: 0;
-        list-style-type: none;
-
-        li {
-            text-align: center;
-
-            a {
-                text-decoration: none;
-                color: $black;
-            }
-        }
-    }
-
-    button {
-        width: 100%;
-        border-radius: 0;
-        color: $white;
-
-        p {
-            margin: 0;
-        }
-    }
-}
-
 .hidden {
     display: none;
+}
+
+.nav-open {
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+@keyframes fadein {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        max-height: 20rem;
+        opacity: 1;
+    }
 }

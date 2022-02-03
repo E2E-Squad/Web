@@ -1,12 +1,12 @@
 import React from 'react';
-import { navLinks } from "./utils/data";
 
 // Style
-import style from "./Header.module.scss";
+import style from "./Nav.module.scss";
 
 interface types {
     children?: JSX.Element,
-    styleClass: string,
+    styleClass?: string,
+    items: [],
 }
 
 interface link {
@@ -18,7 +18,7 @@ const Nav = (props: types) => {
     return (
         <nav className={style[`${props.styleClass}`]}>
             <ul>
-                {navLinks.map((props: link, index: number) => {
+                {props.items.map((props: link, index: number) => {
                     return (
                         <li key={index}>
                             <a href={props.path}>
