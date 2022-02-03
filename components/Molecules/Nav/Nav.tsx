@@ -6,19 +6,14 @@ import style from "./Nav.module.scss";
 interface types {
     children?: JSX.Element,
     styleClass?: string,
-    items: [],
-}
-
-interface link {
-    path: string,
-    name: string,
+    items: {[key: string]: string}[],
 }
 
 const Nav = (props: types) => {
     return (
         <nav className={style[`${props.styleClass}`]}>
             <ul>
-                {props.items.map((props: link, index: number) => {
+                {props.items.map((props, index: number) => {
                     return (
                         <li key={index}>
                             <a href={props.path}>
