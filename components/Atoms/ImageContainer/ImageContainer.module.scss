@@ -1,7 +1,11 @@
-$small: 80px;
-$medium: 200px;
-$large: 350px;
-$big: 600px;
+@use "sass:math";
+@import "styles/atoms/mixins";
+@import "styles/variables";
+
+$img_small: 80px;
+$img_medium: 200px;
+$img_large: 350px;
+$img_big: 600px;
 
 @mixin shape ($shape, $size) {
   @if $shape == "square" {
@@ -12,18 +16,14 @@ $big: 600px;
     border-radius: 50%;
   }
   @if $shape == "rectangle" {
-    width: $size * 16 / 9;
-    //width: calc($size * 16 / 9);
-    //width: math.div($size * 16, 9);
+    width: math.div($size * 16, 9);
   }
 }
 
 
 
 @mixin container ($size) {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   overflow: hidden;
   height: $size;
   &.square {
@@ -35,34 +35,63 @@ $big: 600px;
   &.rectangle {
     @include shape("rectangle", $size)
   }
-  >.image {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-    &.square {
-      @include shape("square", $size)
-    }
-    &.circle {
-      @include shape("circle", $size)
-    }
-    &.rectangle {
-      @include shape("rectangle", $size)
-    }
+  > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .small {
-  @include container($small);
+  @include container($img_small);
 }
 
 .medium {
-  @include container($medium);
+  @include container($img_medium);
 }
 
 .large {
-  @include container($large);
+  @include container($img_large);
 }
 
 .big {
-  @include container($big);
+  @include container($img_big);
+}
+
+@include breakpoint($medium) {
+  $reduce: 10;
+  .small {
+    @include container($img_small - $reduce);
+  }
+
+  .medium {
+    @include container($img_medium - $reduce * 2);
+  }
+
+  .large {
+    @include container($img_large - $reduce * 4);
+  }
+
+  .big {
+    @include container($img_big - $reduce * 16);
+  }
+}
+
+@include breakpoint($small) {
+  $reduce: 20;
+  .small {
+    @include container($img_small - $reduce);
+  }
+
+  .medium {
+    @include container($img_medium - $reduce * 2);
+  }
+
+  .large {
+    @include container($img_large - $reduce * 6);
+  }
+
+  .big {
+    @include container($img_big - $reduce * 16);
+  }
 }

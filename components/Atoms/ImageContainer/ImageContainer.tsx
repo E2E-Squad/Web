@@ -1,7 +1,7 @@
 import React from 'react';
 import {Size, Shape} from 'lib/enums'
 import styles from './ImageContainer.module.scss';
-import Image from 'next/image'
+//import Image from 'next/image'
 //import classNames from "classnames";
 
 type Props = {
@@ -19,8 +19,8 @@ const ImageContainer = ({shape, size, ...imgTags}: Props): JSX.Element => {
     return (
         <>
             <div className={classes}>
-                <Image {...imgTags} layout={"fill"} />
-                {/*<img className={styles.image} {...imgTags} />*/}
+                {/*<Image {...imgTags} layout={"fill"} />*/}
+                <img {...imgTags} />
             </div>
             <style jsx>{`
               div {
