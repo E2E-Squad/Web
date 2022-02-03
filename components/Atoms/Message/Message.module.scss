@@ -1,0 +1,20 @@
+.message-container {
+    background-color: #F1F2F4;
+    padding: 1rem;
+    border-radius: 25px;
+
+    p {
+        margin: 0;
+    }
+
+    &--left {
+        @extend .message-container;
+        border-top-left-radius: 0;
+    }
+
+    &--right {
+        @extend .message-container;
+        border-top-right-radius: 0;
+        background-color: #88DFAB;
+    }
+}
