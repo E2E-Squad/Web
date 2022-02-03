@@ -1,0 +1,68 @@
+$small: 80px;
+$medium: 200px;
+$large: 350px;
+$big: 600px;
+
+@mixin shape ($shape, $size) {
+  @if $shape == "square" {
+    width: $size;
+  }
+  @if $shape == "circle" {
+    width: $size;
+    border-radius: 50%;
+  }
+  @if $shape == "rectangle" {
+    width: $size * 16 / 9;
+    //width: calc($size * 16 / 9);
+    //width: math.div($size * 16, 9);
+  }
+}
+
+
+
+@mixin container ($size) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: $size;
+  &.square {
+    @include shape("square", $size)
+  }
+  &.circle {
+    @include shape("circle", $size)
+  }
+  &.rectangle {
+    @include shape("rectangle", $size)
+  }
+  >.image {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    &.square {
+      @include shape("square", $size)
+    }
+    &.circle {
+      @include shape("circle", $size)
+    }
+    &.rectangle {
+      @include shape("rectangle", $size)
+    }
+  }
+}
+
+.small {
+  @include container($small);
+}
+
+.medium {
+  @include container($medium);
+}
+
+.large {
+  @include container($large);
+}
+
+.big {
+  @include container($big);
+}

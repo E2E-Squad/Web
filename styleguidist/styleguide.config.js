@@ -17,7 +17,8 @@ module.exports = {
     theme: {
     },
     moduleAliases: {
-        // react: path.resolve('../node_modules/react'),
+        react: path.resolve('../node_modules/react'),
+        //react: path.resolve('../node_modules/next'),
         lib: path.resolve('../lib'),
     },
     webpackConfig: {
