@@ -1,7 +1,9 @@
-button {
-  padding: 20px;
-}
-
-.red {
-  color: red;
+@import "styles/variables";
+@import "styles/atoms/buttons";
+.btn {
+  @include btn($black, $easternBlue, 0, 5px, 10px);
+  &--danger{
+    @extend .btn;
+    background-color: $cinnabar;
+  }
 }
