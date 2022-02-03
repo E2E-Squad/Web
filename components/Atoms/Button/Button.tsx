@@ -1,13 +1,17 @@
 import React from 'react';
-import styles from './Button.module.scss';
+import style from "./Button.module.scss";
+
+interface types {
+    children: JSX.Element,
+    styleClass: string,
+}
 
 /**
  * The only true button.
  */
-const Button = () => {
-    // styles
+const Button = (props: types) => {
     return (
-        <button className={styles.red}>I am a button</button>
+        <button className={style[`${props.styleClass}`]}>{props.children}</button>
     )
 }
 
