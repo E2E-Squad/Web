@@ -15,7 +15,7 @@ type Props = {
  * Shows an image in a box.
  */
 const ImageContainer = ({shape, size, ...imgTags}: Props): JSX.Element => {
-    const classes = `${styles[shape]} ${styles[size]}`;
+    const classes = `${styles.custom} ${styles[shape]} ${styles[size]}`;
     return (
         <>
             <div className={classes}>

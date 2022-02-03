@@ -2,6 +2,8 @@
 @import "styles/atoms/mixins";
 @import "styles/variables";
 
+
+
 $img_small: 80px;
 $img_medium: 200px;
 $img_large: 350px;
@@ -94,4 +96,9 @@ $img_big: 600px;
   .big {
     @include container($img_big - $reduce * 16);
   }
+}
+
+.custom {
+  height: 30px;
+  width: 30px;
 }
