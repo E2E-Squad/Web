@@ -24,7 +24,7 @@ const ImageContainer = ({shape, size, ...imgTags}: Props): JSX.Element => {
             </div>
             <style jsx>{`
               div {
-                background-color: red;
+                background-color: #F1F2F4;
               }
             `}</style>
         </>
