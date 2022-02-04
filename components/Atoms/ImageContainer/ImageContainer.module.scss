@@ -29,13 +29,17 @@ $img_big: 600px;
   overflow: hidden;
   height: $size;
   &.square {
-    @include shape("square", $size)
+    @include shape("square", $size);
   }
   &.circle {
-    @include shape("circle", $size)
+    @include shape("circle", $size);
   }
   &.rectangle {
-    @include shape("rectangle", $size)
+    @if $size == 100% {
+      @include shape("square", $size);
+    } @else {
+      @include shape("rectangle", $size)
+    }
   }
   > img {
     object-fit: cover;
@@ -44,23 +48,31 @@ $img_big: 600px;
   }
 }
 
-.small {
-  @include container($img_small);
+@mixin size ($reduce: 0) {
+  .small {
+    @include container($img_small);
+  }
+
+  .medium {
+    @include container($img_medium);
+  }
+
+  .large {
+    @include container($img_large);
+  }
+
+  .big {
+    @include container($img_big);
+  }
+
+  .adaptive {
+    @include container(100%)
+  }
 }
 
-.medium {
-  @include container($img_medium);
-}
+@include size();
 
-.large {
-  @include container($img_large);
-}
-
-.big {
-  @include container($img_big);
-}
-
-@include breakpoint($medium) {
+@include breakpoint(global $medium) {
   $reduce: 10;
   .small {
     @include container($img_small - $reduce);
@@ -77,9 +89,13 @@ $img_big: 600px;
   .big {
     @include container($img_big - $reduce * 16);
   }
+
+  .adaptive {
+    @include container(100%)
+  }
 }
 
-@include breakpoint($small) {
+@include breakpoint(global $small) {
   $reduce: 20;
   .small {
     @include container($img_small - $reduce);
@@ -96,9 +112,8 @@ $img_big: 600px;
   .big {
     @include container($img_big - $reduce * 16);
   }
-}
 
-.custom {
-  height: 30px;
-  width: 30px;
+  .adaptive {
+    @include container(100%)
+  }
 }

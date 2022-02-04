@@ -2,7 +2,8 @@ export enum Size {
     Small = "small",
     Medium = "medium",
     Large = "large",
-    Big = "big"
+    Big = "big",
+    Adaptive = "adaptive"
 }
 
 export enum Shape {
