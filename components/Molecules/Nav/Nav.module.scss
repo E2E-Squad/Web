@@ -1,0 +1,58 @@
+@import "styles/variables";
+@import "styles/atoms/mixins";
+
+.nav-dropdown-menu {
+    background-color: #E5E5E5;
+
+    @include breakpoint($small, min) {
+        display: none;
+    }
+
+    ul {
+        padding: 2rem 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        border-radius: 0;
+        color: $white;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.nav-inline-links {
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                text-decoration: none;
+                color: $white;
+
+                @include breakpoint($small, min) {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

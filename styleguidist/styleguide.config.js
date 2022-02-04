@@ -77,6 +77,12 @@ module.exports = {
                     sectionDepth: 0
 
                 },
+                {
+                    name: 'Organisms',
+                    components: path.resolve(projectRoot, 'components/Organisms/**/*.tsx'),
+                    sectionDepth: 0
+
+                },
             ],
             sectionDepth: 0
         },
