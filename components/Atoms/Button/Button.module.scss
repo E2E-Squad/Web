@@ -1,6 +1,7 @@
 @import "styles/variables";
 @import "styles/atoms/buttons";
 .btn {
+  cursor: pointer;
   @include btn($black, $easternBlue, 0, 5px, 10px);
   &--danger{
     @extend .btn;
