@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactStars from "react-rating-stars-component";
+import {Size, Shape} from 'lib/enums';
 
 // Components
 import Button from '../../Atoms/Button/Button';
+import ImageContainer from '../../Atoms/ImageContainer/ImageContainer';
 
 // Style
 import style from "./UserCard.module.scss";
@@ -14,6 +16,7 @@ interface types {
     ratingValue: number,
     location?: string,
     rank?: string,
+    avatar: string,
 }
 
 const UserCard = (props: types) => {
@@ -22,7 +25,13 @@ const UserCard = (props: types) => {
             <div className={style[`user-card-top`]}>
                 <div className={style[`user-card-info`]}>
                     <div className={style[`user-card-avatar`]}>
-                        <div className={style[`user-card-avatar__container`]}></div>
+                        <div className={style[`user-card-avatar__container`]}>
+                            <ImageContainer 
+                                size={Size.Adaptive} 
+                                shape={Shape.Circle}
+                                src={props.avatar}
+                            />
+                        </div>
                     </div>
                     <div className={style[`user-card-details`]}>
                         <p className={style[`user-card-details__pseudo`]}>{props.pseudo}</p>
