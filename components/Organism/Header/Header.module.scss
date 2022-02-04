@@ -1,0 +1,120 @@
+@import "styles/variables";
+@import "styles/atoms/icons";
+@import "styles/atoms/mixins";
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: $easternBlue;
+    color: $white;
+    padding: 0 1.5rem;
+
+    @include breakpoint($small, min) {
+        background-color: $white;
+        color: $black;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+
+        &__container {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: $black;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .header-nav-large {
+        display: none;
+
+        @include breakpoint($small, min) {
+            display: flex;
+            align-items: center;
+        }
+
+        &__links {
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+
+                li {
+                    margin: 0 2rem;
+
+                    a {
+                        text-decoration: none;
+                        color: $white;
+
+                        @include breakpoint($small, min) {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__avatar {
+
+            &__container {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background-color: $black;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .header-menu-icon {
+        display: flex;
+        align-items: center;
+
+        .icons-item {
+            height: 3em;
+            width: 3rem;
+        }
+
+        @include breakpoint($small, min) {
+            display: none;
+        }
+    }
+}
+
+.header-dropdown-menu {
+    background-color: #E5E5E5;
+
+    ul {
+        padding: 2rem 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        border-radius: 0;
+        color: $white;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

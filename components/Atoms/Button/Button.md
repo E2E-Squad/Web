@@ -1,13 +1,8 @@
 This button is really basic.
 
 ```tsx
-<Button />
+<Button styleClass="btn">Hello mate</Button>
 ```
-
-```jsx padded
-<>
-<Button>Push Me</Button>
-<Button>Click Me</Button>
-<Button>Tap Me</Button>
-</>
+```tsx
+<Button styleClass="btn--danger">Hello danger</Button>
 ```
