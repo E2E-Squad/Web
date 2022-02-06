@@ -6,12 +6,21 @@ interface types {
     styleClass: string,
 }
 
+const btnHandle = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log('hello');
+}
+
 /**
  * The only true button.
  */
 const Button = (props: types) => {
     return (
-        <button className={style[`${props.styleClass}`]}>{props.children}</button>
+        <button 
+            onClick={btnHandle}
+            className={style[`${props.styleClass}`]}
+        >
+            {props.children}
+        </button>
     )
 }
 
