@@ -11,5 +11,6 @@
     &:hover {
         color: $bg;
         background-color: $color;
+        border: 1px solid $bg;
     }
 }

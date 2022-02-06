@@ -2,9 +2,14 @@
 @import "styles/atoms/buttons";
 .btn {
   cursor: pointer;
-  @include btn($black, $easternBlue, 0, 5px, 10px);
+@include btn($white, $curiousBlue, 0, 5px, 10px);
   &--danger{
     @extend .btn;
     background-color: $cinnabar;
+    &:hover {
+      color: $cinnabar;
+      background-color: $white;
+      border-color: $cinnabar;
+    }
   }
 }
