@@ -4,13 +4,13 @@ import {Size, Shape} from 'lib/enums';
 
 // Components
 import Button from '../../Atoms/Button/Button';
+import Icon from '../../Atoms/Icon/Icon';
 import ImageContainer from '../../Atoms/ImageContainer/ImageContainer';
 
 // Style
 import style from "./UserCard.module.scss";
 
 interface types {
-    children?: JSX.Element,
     styleClass?: string,
     pseudo: string,
     ratingValue: number,
@@ -48,7 +48,13 @@ const UserCard = (props: types) => {
                     </div>
                 </div>
                 <div className={style[`user-card-btn`]}>
-                    {props.children}
+                    <Icon 
+                        styleClass="icon-exclamation-triangle"
+                        icon="exclamation-triangle"
+                        color="#ffd700"
+                        size="lg"
+                        title="Signaler"
+                    />
                 </div>
             </div>
             <div className={style[`user-card-bottom`]}>
