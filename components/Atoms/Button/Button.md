@@ -1,8 +1,14 @@
-Primary button style.
+Un bouton avec les propriétés par defaut:
 ```tsx
-<Button styleClass="btn">Hello mate</Button>
+<Button url="#" styleClass="btn">Bouton</Button>
 ```
-Danger button style.
+les autres styles de boutons:
 ```tsx
-<Button styleClass="btn--danger">Hello danger</Button>
+<Button url="#" styleClass="btn--danger">Danger</Button>
+<br/>
+<br/>
+<Button url="#" styleClass="btn--success">Success</Button>
+<br/>
+<br/>
+<Button url="#" styleClass="btn--link">Link</Button>
 ```

@@ -2,14 +2,34 @@
 @import "styles/atoms/buttons";
 .btn {
   cursor: pointer;
-@include btn($white, $curiousBlue, 0, 5px, 10px);
+@include btn($black, $curiousBlue, 0, 5px, 10px);
   &--danger{
     @extend .btn;
-    background-color: $cinnabar;
+    background-color: $danger;
     &:hover {
-      color: $cinnabar;
+      color: $danger;
       background-color: $white;
-      border-color: $cinnabar;
+      border-color: $danger;
+    }
+  }
+  &--success{
+    @extend .btn;
+    background-color: $success;
+    &:hover {
+      color: $success;
+      background-color: $white;
+      border-color: $success;
+    }
+  }
+  &--link{
+    @extend .btn;
+    color: $link;
+    background-color: transparent;
+    text-decoration: underline;
+    &:hover {
+      border: 1px solid transparent;
+      color: $link;
+      text-decoration-thickness: 3px;
     }
   }
 }
