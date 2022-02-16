@@ -3,12 +3,8 @@ Un bouton avec les propriétés par defaut:
 <Button url="#" styleClass="btn">Bouton</Button>
 ```
 les autres styles de boutons:
-```tsx
+```tsx padded
 <Button url="#" styleClass="btn--danger">Danger</Button>
-<br/>
-<br/>
 <Button url="#" styleClass="btn--success">Success</Button>
-<br/>
-<br/>
 <Button url="#" styleClass="btn--link">Link</Button>
 ```
