@@ -1,8 +1,10 @@
-This button is really basic.
-
+Un bouton avec les propriétés par defaut:
 ```tsx
-<Button styleClass="btn">Hello mate</Button>
+<Button styleClass="btn">Bouton</Button>
 ```
-```tsx
-<Button styleClass="btn--danger">Hello danger</Button>
+les autres styles de boutons:
+```tsx padded
+<Button styleClass="btn--danger">Danger</Button>
+<Button styleClass="btn--success">Success</Button>
+<Button styleClass="btn--link">Link</Button>
 ```
