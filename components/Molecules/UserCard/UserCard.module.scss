@@ -1,0 +1,68 @@
+@import "styles/variables";
+@import "styles/atoms/mixins";
+
+.main-user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #F1F2F4;
+    border-radius: 5px;
+
+    .user-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .user-card-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-card-avatar {
+        &__container {
+            height: 50px;
+            width: 50px;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .user-card-details {
+        &__pseudo {
+            margin: 0;
+        }
+    }
+
+    .user-card-bottom {
+        display: none;
+    }
+
+    &--full {
+        @extend .main-user-card;
+        display: flex;
+        flex-direction: column;
+
+        .user-card-bottom {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+
+            .user-card-profile {
+                width: 100%;
+                margin: 1rem 0;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            button {
+                p {
+                    margin: 0;
+                }
+            }
+        }    
+    }
+}

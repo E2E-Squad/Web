@@ -1,0 +1,35 @@
+@import "styles/variables";
+@import "styles/atoms/mixins";
+
+.chat-card-container {
+    display: flex;
+    flex-direction: column;
+
+    .chat-card-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .chat-card-avatar {
+        &__container {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .chat-card-details {
+        &__pseudo {
+            margin: 0 0.5rem;
+        }
+    }
+
+    &--right {
+        @extend .chat-card-container;
+        align-items: flex-end;
+
+        .chat-card-info {
+            flex-direction: row-reverse;
+        }
+    }
+}

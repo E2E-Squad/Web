@@ -1,0 +1,85 @@
+@import "styles/variables";
+@import "styles/atoms/icons";
+@import "styles/atoms/mixins";
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: $easternBlue;
+    padding: 0 1.5rem;
+
+    @include breakpoint($small, min) {
+        background-color: $white;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        color: $white;
+        text-decoration: none;
+
+        @include breakpoint($small, min) {
+            color: $black;
+        }
+
+        &__container {
+            height: 50px;
+            width: 50px;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .header-nav-large {
+        display: none;
+
+        @include breakpoint($small, min) {
+            display: flex;
+            align-items: center;
+        }
+
+        &__avatar {
+
+            &__container {
+                height: 50px;
+                width: 50px;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .header-menu-icon {
+        display: flex;
+        align-items: center;
+
+        .icons-item {
+            height: 3em;
+            width: 3rem;
+        }
+
+        @include breakpoint($small, min) {
+            display: none;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-open {
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+@keyframes fadein {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        max-height: 20rem;
+        opacity: 1;
+    }
+}

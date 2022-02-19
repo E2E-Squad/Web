@@ -1,6 +1,8 @@
 // Insert here svg code convert to base64
 $icons: (
     '42logo': 'PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+NDI8L3RpdGxlPjxwYXRoIGQ9Ik0yNCAxMi40MmwtNC40MjggNC40MTVIMjR6bS00LjQyOC00LjQxN2wtNC40MTQgNC40MTh2NC40MTRoNC40MTRWMTIuNDJMMjQgOC4wMDNWMy41NzVoLTQuNDI4em0tNC40MTQgMGw0LjQxNC00LjQyOGgtNC40MTR6TTAgMTUuOTk2aDguODQydjQuNDNoNC40MTJWMTIuNDJINC40MjhsOC44MjYtOC44NDZIOC44NDJMMCAxMi40MjF6Ii8+PC9zdmc+',
+    'menu': 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItYWxpZ24tanVzdGlmeSI+PGxpbmUgeDE9IjIxIiB5MT0iMTAiIHgyPSIzIiB5Mj0iMTAiPjwvbGluZT48bGluZSB4MT0iMjEiIHkxPSI2IiB4Mj0iMyIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMjEiIHkxPSIxNCIgeDI9IjMiIHkyPSIxNCI+PC9saW5lPjxsaW5lIHgxPSIyMSIgeTE9IjE4IiB4Mj0iMyIgeTI9IjE4Ij48L2xpbmU+PC9zdmc+',
+    'close': 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXIteCI+PGxpbmUgeDE9IjE4IiB5MT0iNiIgeDI9IjYiIHkyPSIxOCI+PC9saW5lPjxsaW5lIHgxPSI2IiB5MT0iNiIgeDI9IjE4IiB5Mj0iMTgiPjwvbGluZT48L3N2Zz4=',
 );
 
 $data-svg-prefix: 'data:image/svg+xml;base64,';
@@ -14,5 +16,13 @@ $data-png-prefix: 'data:image/png;base64,';
     // Add here name for each icon
     &.exemple {
         background-image: url( $data-svg-prefix + map-get( $icons, '42logo' ));
+    }
+
+    &.icon-menu {
+        background-image: url( $data-svg-prefix + map-get( $icons, 'menu' ));
+    }
+
+    &.icon-close {
+        background-image: url( $data-svg-prefix + map-get( $icons, 'close' ));
     }
 }

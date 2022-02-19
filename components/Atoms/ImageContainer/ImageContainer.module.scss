@@ -1,0 +1,119 @@
+@use "sass:math";
+@import "styles/atoms/mixins";
+@import "styles/variables";
+
+
+
+$img_small: 80px;
+$img_medium: 200px;
+$img_large: 350px;
+$img_big: 600px;
+
+@mixin shape ($shape, $size) {
+  @if $shape == "square" {
+    width: $size;
+  }
+  @if $shape == "circle" {
+    width: $size;
+    border-radius: 50%;
+  }
+  @if $shape == "rectangle" {
+    width: math.div($size * 16, 9);
+  }
+}
+
+
+
+@mixin container ($size) {
+  display: inline-block;
+  overflow: hidden;
+  height: $size;
+  &.square {
+    @include shape("square", $size);
+  }
+  &.circle {
+    @include shape("circle", $size);
+  }
+  &.rectangle {
+    @if $size == 100% {
+      @include shape("square", $size);
+    } @else {
+      @include shape("rectangle", $size)
+    }
+  }
+  > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin size ($reduce: 0) {
+  .small {
+    @include container($img_small);
+  }
+
+  .medium {
+    @include container($img_medium);
+  }
+
+  .large {
+    @include container($img_large);
+  }
+
+  .big {
+    @include container($img_big);
+  }
+
+  .adaptive {
+    @include container(100%)
+  }
+}
+
+@include size();
+
+@include breakpoint(global $medium) {
+  $reduce: 10;
+  .small {
+    @include container($img_small - $reduce);
+  }
+
+  .medium {
+    @include container($img_medium - $reduce * 2);
+  }
+
+  .large {
+    @include container($img_large - $reduce * 4);
+  }
+
+  .big {
+    @include container($img_big - $reduce * 16);
+  }
+
+  .adaptive {
+    @include container(100%)
+  }
+}
+
+@include breakpoint(global $small) {
+  $reduce: 20;
+  .small {
+    @include container($img_small - $reduce);
+  }
+
+  .medium {
+    @include container($img_medium - $reduce * 2);
+  }
+
+  .large {
+    @include container($img_large - $reduce * 6);
+  }
+
+  .big {
+    @include container($img_big - $reduce * 16);
+  }
+
+  .adaptive {
+    @include container(100%)
+  }
+}
