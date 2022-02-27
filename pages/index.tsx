@@ -5,18 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from '../styles/pages/Home.module.scss'
 import React from 'react';
-import ImageContainer from "../components/Atoms/ImageContainer/ImageContainer";
-import {Shape, Size} from "../lib/enums";
 import colorLogo from '../public/e2eLogoColor.png'
 
 const Home: NextPage = () => {
     return (
         <div className={styles.container}>
-            <Head>
-                <title>E2E</title>
-                <meta name="description" content="Le peer-to-peer learning à l'école obligatoire"/>
-                <link rel="icon" href="/favicon.ico"/>
-            </Head>
             <main className={styles.main}>
                 <div style={{height: 200, width: '100%', position: "relative"}}>
                     <Image src={colorLogo} layout={"fill"} objectFit={"contain"}/>
@@ -34,7 +27,9 @@ const Home: NextPage = () => {
                     </p>
                 </div>
                 <div style={{display: "flex", flexDirection: "column"}}>
-                    <Button styleClass="btn">Se connecter</Button>
+                    <Button styleClass="btn">
+                        <Link href={'login'}>Se connecter</Link>
+                    </Button>
                     <Link href={'#'}>Créer un compte</Link>
                 </div>
             </main>
