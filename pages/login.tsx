@@ -24,12 +24,6 @@ const Login: NextPage = () => {
             router.replace('/profile')
         else
             setError("Identifiants erronés")
-        console.log(user.username)
-        console.log(creds.login)
-        console.log(creds.password)
-        console.log(user.password)
-
-        console.log("still executed")
     }
     return (
         <>
