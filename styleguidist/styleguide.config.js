@@ -1,5 +1,6 @@
 const path = require("path");
 const projectRoot = path.resolve(__dirname, '..')
+const webpack = require('webpack')
 module.exports = {
     title: "E2E Styleguide",
     version: "0.0.1",
@@ -47,7 +48,12 @@ module.exports = {
                     use: ['style-loader', 'css-loader']
                 }
             ]
-        }
+        },
+        plugins: [
+            new webpack.DefinePlugin({
+                process: { env: {} }
+            })
+        ]
     },
     pagePerSection: true,
     sections: [

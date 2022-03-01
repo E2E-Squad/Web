@@ -2,9 +2,9 @@ import React from 'react';
 import style from "./Button.module.scss";
 
 interface types {
-    children: JSX.Element,
-    styleClass: string,
-    ClickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void,
+    children: React.ReactNode,
+    styleClass: 'primary' | 'secondary' | 'danger' | 'success',
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
 }
 
 /**
@@ -16,11 +16,15 @@ const Button = (props: types) => {
         <button
             type="button"
             className={classes}
-            onClick={props.ClickHandler}
+            onClick={props.onClick}
         >
             {props.children}
         </button>
     )
+}
+
+Button.defaultProps = {
+    styleClass: 'primary'
 }
 
 export default Button;

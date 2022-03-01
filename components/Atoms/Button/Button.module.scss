@@ -1,35 +1,60 @@
 @import "styles/variables";
-@import "styles/atoms/buttons";
+
 .btn {
   cursor: pointer;
-@include btn($black, $curiousBlue, 0, 5px, 10px);
-  &--danger{
-    @extend .btn;
-    background-color: $danger;
-    &:hover {
-      color: $danger;
-      background-color: $white;
-      border-color: $danger;
-    }
+  display: inline-block;
+  color: $black;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s $ease;
+  border: 1px solid transparent;
+  height: 40px;
+  line-height: 22px;
+  > a {
+    color: $black;
+    text-decoration: none;
   }
-  &--success{
-    @extend .btn;
-    background-color: $success;
-    &:hover {
-      color: $success;
-      background-color: $white;
-      border-color: $success;
-    }
+}
+
+@mixin colorize($color) {
+  background-color: $color;
+
+  &:hover {
+    color: $color;
+    background-color: $white;
+    border: 1px solid $color;
   }
-  &--link{
-    @extend .btn;
+}
+
+.primary {
+  @extend .btn;
+  @include colorize($curiousBlue);
+}
+
+.secondary {
+  @extend .btn;
+  color: $white;
+  @include colorize($black);
+}
+
+.danger {
+  @extend .btn;
+  @include colorize($danger);
+}
+
+.success {
+  @extend .btn;
+  @include colorize($success);
+}
+
+.link{
+  @extend .btn;
+  color: $link;
+  text-decoration: underline;
+  background-color: transparent;
+  &:hover {
     color: $link;
-    background-color: transparent;
-    text-decoration: underline;
-    &:hover {
-      border: 1px solid transparent;
-      color: $link;
-      text-decoration-thickness: 3px;
-    }
+    text-decoration-thickness: 3px;
+    border: 1px solid transparent;
   }
 }
