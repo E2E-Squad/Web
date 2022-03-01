@@ -30,7 +30,7 @@ const Home: NextPage = () => {
                     <Button styleClass="btn">
                         <Link href={'/login'}>Se connecter</Link>
                     </Button>
-                    <Link href={'#'}>Créer un compte</Link>
+                    <Link href={'/register'}>Créer un compte</Link>
                 </div>
             </main>
         </div>
