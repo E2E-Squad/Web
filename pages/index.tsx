@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                     </p>
                 </div>
                 <div style={{display: "flex", flexDirection: "column"}}>
-                    <Button styleClass="btn">
+                    <Button>
                         <Link href={'/login'}>Se connecter</Link>
                     </Button>
                     <Link href={'/register'}>Créer un compte</Link>

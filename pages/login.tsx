@@ -34,7 +34,7 @@ const Login: NextPage = () => {
                 }
                 <input id={"login"} type={"text"} placeholder={"Email ou Pseudo"} onChange={bindCreds} />
                 <input id={"password"} type={"password"} placeholder={"Mot de passe"} onChange={bindCreds} />
-                <Button styleClass={"btn"} ClickHandler={login}>Se connecter</Button>
+                <Button onClick={login}>Se connecter</Button>
             </div>
         </>
     )
