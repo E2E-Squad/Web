@@ -9,6 +9,7 @@ import Link from "next/link";
 <>
 <Button styleClass="primary">Primary</Button>
 <Button styleClass="primary"><Link href={'#'}>Link as button</Link></Button>
+<Button styleClass="secondary">Secondary</Button>
 <Button styleClass="danger">Danger</Button>
 <Button styleClass="success">Success</Button>
 <Button styleClass="link">Button as link</Button>

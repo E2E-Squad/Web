@@ -8,6 +8,8 @@
   padding: 10px;
   transition: all 0.3s $ease;
   border: 1px solid transparent;
+  height: 40px;
+  line-height: 22px;
   > a {
     color: $black;
     text-decoration: none;
@@ -27,6 +29,12 @@
 .primary {
   @extend .btn;
   @include colorize($curiousBlue);
+}
+
+.secondary {
+  @extend .btn;
+  color: $white;
+  @include colorize($black);
 }
 
 .danger {
